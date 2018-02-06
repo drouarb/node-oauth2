@@ -17,8 +17,10 @@ class Endpoints {
                 error: "Invalid user/token"
             }))
         }
+        console.log(req.user);
         res.send(JSON.stringify({
-            username: req.user.user.username
+            username: req.user.user.username,
+            id: req.user.user.id
         }))
     }
 }

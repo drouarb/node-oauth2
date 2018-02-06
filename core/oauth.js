@@ -48,7 +48,9 @@ class OAuth {
                 next()
             })
             .catch((err) => {
-                res.status(err.code || 500).json(err)
+                res.status(err.code || 500).json({
+                    error: "Invalid token"
+                })
             })
     }
 
