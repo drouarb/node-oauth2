@@ -7,7 +7,8 @@ const redis = require('../storage/redis');
 class Endpoints {
     static token(req, res) {
         res.send(JSON.stringify({
-            status: "success"
+            status: "success",
+            id: req.user.user.id
         }))
     }
 
